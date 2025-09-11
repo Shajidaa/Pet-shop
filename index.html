@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paddy | website</title>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "Lato", sans-serif;
+      }
+      .active {
+        border: 1px solid #0e7a81;
+        background-color: hsl(184, 80%, 28%, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="max-w-7xl mx-auto">
+      <div class="navbar bg-base-100 shadow-sm py-5">
+        <div class="navbar-start px-3">
+          <div class="flex gap-1">
+            <img class="size-7" src="./images/logo.webp" alt="logo" />
+            <h1 class="text-3xl font-black text-[#131313]">Paddy</h1>
+          </div>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="text-xl font-normal text-[#131313]"><a>Home</a></li>
+
+            <li class="text-xl font-normal text-[#131313]"><a>Shop</a></li>
+
+            <li class="text-xl font-normal text-[#131313]"><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="p-2 border-1 border-[#0E7A81] rounded-full"
+            ><i class="fa-regular fa-user text-2xl p-1 font-thin"></i
+          ></a>
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow right-10"
+            >
+              <li class="text-xl font-normal text-[#131313]"><a>Home</a></li>
+
+              <li class="text-xl font-normal text-[#131313]"><a>Shop</a></li>
+
+              <li class="text-xl font-normal text-[#131313]"><a>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- banner  -->
+    <section
+      class="max-w-7xl mx-auto flex flex-col justify-center items-center md:p-7 px-3 py-5 gap-4"
+    >
+      <h1
+        class="text-[rgba(19, 19, 19, 0.6)] font-bold text-xl md:text-2xl text-center"
+      >
+        Bringing Families Together ❤️‍🔥
+      </h1>
+      <p
+        class="lg:text-7xl md:text-5xl text-4xl font-bold text-[#131313] md:w-[75%] w-full mx-auto text-center"
+      >
+        Your Path to Adoption Starts Here
+      </p>
+      <p
+        class="text-bold text-base text-[#131313] w-full md:w-[75%] mx-auto text-center"
+      >
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a.
+      </p>
+      <button
+        class="md:text-xl text-sm rounded-xl text-white btn inline bg-[#0E7A81]"
+      >
+        View More
+      </button>
+      <img src="./images/pet.webp " class="py-5" alt="" />
+    </section>
+    <main>
+      <section class="max-w-7xl mx-auto p-2">
+        <h1 class="text-4xl font-bold text-center">Adopt Your Best Friend</h1>
+        <p
+          class="text-bold text-base text-[#131313] w-full md:w-[75%] mx-auto text-center"
+        >
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+        <ul
+          id="categories-pet"
+          class="py-5 px-3 flex flex-col md:flex-row gap-3 justify-between mt-5"
+        ></ul>
+      </section>
+
+      <section class="mx-auto max-w-7xl">
+        <div id="loadPetCategories">
+          <!-- <div class="container border-1">
+            <div><img src="./images/logo.webp" alt="pet image" /></div>
+            <div>
+              <h1 class="text-2xl">Mister Tartosh</h1>
+              <div>
+                <p>Breed:</p>
+                <p>Birth:</p>
+                <p>Gender:</p>
+                <p>Price:</p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-2">
+              <p>like</p>
+              <p>Adopt</p>
+              <p>Details</p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
