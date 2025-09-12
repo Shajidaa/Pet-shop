@@ -137,27 +137,67 @@
       </section>
 
       <section class="mx-auto max-w-7xl">
-        <div id="loadPetCategories">
-          <!-- <div class="container border-1">
-            <div><img src="./images/logo.webp" alt="pet image" /></div>
+        <div
+          class="flex justify-between items-center my-5 flex-wrap md:flex-nowrap"
+        >
+          <p class="font-bold text-xl">Best Deal for you</p>
+          <p
+            class="md:text-xl text-sm font-semibold rounded-2xl text-white btn bg-[#0E7A81]"
+          >
+            Short by price
+          </p>
+        </div>
+        <div class="grid md:grid-cols-4 grid-cols-1">
+          <div
+            id="loadPetCategories"
+            class="grid md:grid-cols-3 md:col-span-3 grid-cols-1 border-1 p-4 gap-5"
+          ></div>
+          <div id="category-image" class="grid-cols-1">
             <div>
-              <h1 class="text-2xl">Mister Tartosh</h1>
-              <div>
-                <p>Breed:</p>
-                <p>Birth:</p>
-                <p>Gender:</p>
-                <p>Price:</p>
-              </div>
+              <img src="./images/logo.webp" alt="" />
             </div>
-            <div class="flex justify-between mt-2">
-              <p>like</p>
-              <p>Adopt</p>
-              <p>Details</p>
-            </div>
-          </div> -->
+          </div>
         </div>
       </section>
     </main>
+    <footer class="p-20 max-w-7xl bg-black mx-auto hidden">
+      <div class="flex justify-between items-center text-white">
+        <div>
+          <div class="flex gap-1">
+            <img class="size-7" src="./images/logo.webp" alt="logo" />
+            <h1 class="text-3xl font-black text-white">Paddy</h1>
+          </div>
+          <div class="text-xl font-normal text-gray-200">
+            <p>Location: av. Washington 165, NY CA</p>
+            <p>54003</p>
+            <p>Phone: +31 85 964 47 25</p>
+            <p>Email: info@yourdomain.com</p>
+            <p>Openings hours: 9.00 AM - 5.00 PM</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xl font-bold">Useful Links</p>
+          <div class="text-xl font-normal text-gray-200">
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Animals</p>
+            <p>Foundation</p>
+            <p>Contact</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-xl font-bold">Drop a Message</p>
+          <div>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              class="input input-ghost"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="./index.js"></script>
   </body>
