@@ -55,8 +55,28 @@ const loadPetCategories = (category) => {
 
 const displayPetCategories = (pets) => {
   const loadPetCategoriesContainer = document.getElementById('loadPetCategories');
+  const displayImage=document.getElementById('category-image');
  loadPetCategoriesContainer.innerHTML = ``;
+ displayImage.innerHTML='';
+  if (pets.length==0) {
+  loadPetCategoriesContainer.innerHTML+=`
+  <div class=" grid col-span-3 grid-cols-1 bg-[##f8f8f8]">
+<div class="flex flex-col justify-center items-center  gap-3 p-5">
+  <img src="./images/error.webp" alt="" />
+  <h1 class="text-2xl font-bold">No Information Available</h1>
+  <p class="text-xl font-semibold text-center">
+    It is a long established fact that a reader will be distracted by the
+    readable content of a page when looking at its layout. The point of using
+    Lorem Ipsum is that it has a.
+  </p>
+</div>
+</div>
+  
+  `
+ }
   pets.forEach(pet => {
+
+  
     loadPetCategoriesContainer.innerHTML += `
     
    <div class="container border-1 border-gray-200 p-5 rounded-xl shadow">
@@ -99,6 +119,11 @@ const displayPetCategories = (pets) => {
           </div>
     
     `
+   displayImage.innerHTML+=`
+    <div>
+              <img class="mb-5 w-full rounded-xl" src="${pet.image}" alt="pet image" />
+            </div>
+   `
   })
 }
 
